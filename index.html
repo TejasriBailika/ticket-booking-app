@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>IPL Ticket Booking</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>🏏 IPL Ticket Booking</h1>
+  <p>Select your favorite match and book seats</p>
+
+  <!-- 🔥 Global Button -->
+  <button class="top-btn" onclick="showBookings()">📄 My Bookings</button>
+</header>
+
+<!-- 📄 BOOKINGS PANEL -->
+<section id="all-bookings" class="bookings-panel" style="display:none;"></section>
+
+<!-- 🏏 MATCHES -->
+<section class="matches-grid" id="matches-grid"></section>
+
+<!-- 🎟 MATCH DETAILS -->
+<section id="match-details" style="display:none;">
+
+  <div class="stadium-background" id="stadium-bg">
+    <h2 id="match-title"></h2>
+
+    <div class="stadium-info">
+      <span id="stadium-name"></span>
+      <p id="home-ground-note"></p>
+      <p id="availability"></p>
+    </div>
+  </div>
+
+  <!-- 💺 SEATS -->
+  <div class="seat-map-container">
+    <div class="screen">🏏 Pitch View</div>
+    <div class="seat-map" id="seat-map"></div>
+  </div>
+
+  <!-- 📊 SUMMARY -->
+  <div class="summary">
+    <h2>Booking Summary</h2>
+    <p>Seats: <span id="selected-seats">None</span></p>
+    <p>Total: ₹<span id="total-price">0</span></p>
+    <button id="book-btn" disabled>Book Now</button>
+  </div>
+
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
